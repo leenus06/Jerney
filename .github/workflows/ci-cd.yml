@@ -249,7 +249,7 @@ jobs:
           echo "Frontend image at line: ${FRONTEND_LINE}"
           sed -i "${FRONTEND_LINE}s|.*|          image: ${FRONTEND_IMAGE}:${IMAGE_TAG}|" k8s/jerney.yaml
 
-          echo "✅ Updated images to tag: ${IMAGE_TAG}"
+          echo "Updated images to tag: ${IMAGE_TAG}"
           grep -n "image:" k8s/jerney.yaml
 
       - name: Commit and push manifest update
